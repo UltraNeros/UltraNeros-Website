@@ -1,0 +1,8 @@
+Stone
+Ores
+Ground
+Foliage
+Construction
+Crafts
+Dungeons
+Nether
