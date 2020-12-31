@@ -1,0 +1,15 @@
+.downWrap {
+  display: grid;
+  grid-template: auto auto auto / 1fr;
+  grid-gap: 0.5vw;
+}
+
+.downWrap > * {
+  background-color: var(--primaryColor);
+}
+
+.downWrap h1 {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: center;
+  border: var(--primaryBorder);
+}
