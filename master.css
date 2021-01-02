@@ -23,13 +23,29 @@ body {
   --deskPrimaryBorder: 3px solid darkgreen;
   --mobPrimaryBorder: 5px solid darkgreen;
 
-  --deskBorderRadius: 0.5vw;
+  --deskBorderRadius: 7px;
   --mobBorderRadius: 4vw;
 
-  --deskContentPad: 0.5vw;
-  --mobContentPad: 2vw;
+  --contentPad: 0.5rem;
   /* overflow: hidden; */
   color: var(--quaternaryColor);
+}
+
+.contentContainer {
+  padding-top: 5.1rem;
+  padding-bottom: 1vw;
+  z-index: 1;
+}
+
+.contElement > * {
+  padding: var(--contentPad);
+  border: var(--mobPrimaryBorder);
+  border-radius: var(--mobBorderRadius);
+  background-color: var(--primaryColor);
+}
+
+.title {
+  text-align: center;
 }
 
 @media only screen and (min-width: 1080px) { /*Desktop Styling*/
@@ -37,9 +53,20 @@ body {
     width: 70rem;
     margin: 0 auto;
   }
+
+  .contentContainer {
+    padding-top: 4.5rem;
+    padding-bottom: 0.5vw;
+  }
+
+  .contElement > * {
+    padding: var(--contentPad);
+    border-radius: var(--deskBorderRadius);
+    border: var(--deskPrimaryBorder);
+  }
 }
 
-/*                         Menu                         */
+/* -------------------------  Menu ------------------------- */
 
 .navContainer {
   width: 100%;
@@ -54,18 +81,18 @@ body {
 
 .navWrap a {
   width: calc(100% / 4);
-  height: 7vw;
-  margin: 0.5vw;
+  height: 4rem;
+  margin: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 1.3rem;
   color: var(--quaternaryColor);
 }
 
 .navWrap i {
-  padding-left: 0.2em;
+  padding-left: 0.4rem;
 }
 
 .navBonus {
@@ -79,26 +106,20 @@ body {
   }
 
   .navWrap a {
-    width: 13vw;
-    height: 2.5vw;
+    width: 10rem;
+    height: 3rem;
+    margin: 0.5rem;
     font-size: 1.2rem;
-    /* border: 0px solid green; */
-    transition: background-color 800ms, margin 800ms, width 800ms, height 800ms, font-size 800ms, margin 800ms;
+    transition: background-color 800ms, margin 800ms, width 800ms, height 800ms, font-size 800ms;
   }
 
   .navWrap a:hover {
-    width: 14vw;
-    height: 3vw;
-    font-size: 1.4em;
-    margin: 0.25vw 0;
-    /* border: var(--deskPrimaryBorder); */
+    width: 11rem;
+    height: 4rem;
+    margin: 0;
+    font-size: 1.3rem;
     background-color: var(--secondaryColor);
-    transition: background-color 100ms, margin 100ms, width 100ms, height 100ms, font-size 100ms, margin 100ms;
-
-    /* margin: inherit 0;
-    background-color: var(--secondaryColor);
-    transform: scale(1.5);
-    transition: background-color 100ms, transform 100ms,; */
+    transition: background-color 100ms, margin 100ms, width 100ms, height 100ms, font-size 100ms;
   }
 
   .fas, .far {
@@ -107,7 +128,7 @@ body {
 
   .navBonus {
     width: 100%;
-    margin-left: 1em;
+    margin-left: 1rem;
     border-left: 0.2em solid #ffffff;
     display: flex;
     justify-content: center;
@@ -119,10 +140,6 @@ body {
     font-size: 1.5em;
   }
 }
-
-/*                         Body(Index)                         */
-
-
 
 /* .indexWrap:not(hr) {
   display: grid;
@@ -194,87 +211,6 @@ body {
   color: black;
   border: 0.25vw inset yellow;
 }*/
-
-/* .downloads {
-  width: 100%;
-  /* height: 85.6vh; */
-  /*padding: 0.5vw 0;
-  grid-row: 7 / 9;
-  display: grid;
-  grid-template: 1fr 1fr / repeat(5, 1fr);
-  justify-content: center;
-  align-items: center;
-  grid-gap: 1vw;
-}
-.downloads p:first-child {
-  margin: 0 auto;
-  grid-area: 1 / 1 / 2 / 6;
-  width: 40%;
-}
-.downloads p {
-  background-color: blue;
-  text-align: center;
-  border: 0.25vw solid var(--secondaryColor);
-}
-.downloads a {
-  padding: 2vw 0;
-  background-color: firebrick;
-  display: block;
-  text-decoration: none;
-  font-size: 1.5vw;
-  color: var(--quaternaryColor);
-}
-.downloads a:hover {
-  background-color: darkred;
-}
-.downloads a::before {
-  content: "Download\a";
-  text-decoration: underline;
-  white-space: pre-wrap;
-  font-size: 2vw;
-}
-
-.instructions {
-  text-align: left;
-  color: var(--quaternaryColor);
-  display: block;
-}
-.instructions div ul {
-  width: 100%;
-  padding: 0.25vw;
-  margin-bottom: 0.5vw;
-  list-style: none;
-  text-align: center;
-  background-color: var(--secondaryColor);
-}
-.instructions ul h2 {
-  padding-bottom: 0.25vw;
-  text-decoration: underline;
-  font-size: 1vw;
-}
-.instructions ul p {
-  text-align: left;
-  font-size: 0.8vw;
-}
-
-.instructions h5 {
-  padding: 0.25vw;
-  background-color: var(--secondaryColor);
-}*/
-.space {
-  margin-left: 0.5vw;
-}
-
-.images {
-  grid-area: 11 / 1 / 12 / 3;
-}
-
-.images iframe {
-  width: 90%;
-  border: var(--primaryBorder);
-}
-
-
 /*
 .contentContainer h1:first-child {
 }

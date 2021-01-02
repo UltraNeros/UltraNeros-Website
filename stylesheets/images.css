@@ -1,0 +1,8 @@
+.images {
+  margin-top: var(--contentPad);
+}
+
+.images iframe {
+  width: 100%;
+  border: var(--primaryBorder);
+}

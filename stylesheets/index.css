@@ -1,24 +1,10 @@
-.contentContainer {
-  padding-top: 9vw;
-  padding-bottom: 1vw;
-  z-index: 1;
-}
-
 .indexWrap {
   display: grid;
   grid-template: auto / 1fr;
-  grid-gap: 1vw;
-}
-
-.indexWrap div {
-  padding: var(--mobContentPad);
-  background-color: var(--primaryColor);
-  border: var(--mobPrimaryBorder);
-  border-radius: var(--mobBorderRadius);
+  grid-gap: var(--contentPad);
 }
 
 .title {
-  padding: var(--mobContentPad);
   text-align: center;
 }
 
@@ -36,7 +22,7 @@
 }
 
 .blocks h2 {
-  margin: 0.5vw 0;
+  margin: 0.5rem 0;
   text-align: center;
 }
 
@@ -55,21 +41,8 @@
 }
 
 @media only screen and (min-width: 1080px) {
-  .contentContainer {
-    padding-top: 4vw;
-    padding-bottom: 0.5vw;
-  }
-
   .indexWrap {
     grid-template: repeat(3, auto) / 7fr 3fr;
-    grid-gap: 0.5vw;
-  }
-
-  .indexWrap div {
-
-    border-radius: var(--deskBorderRadius);
-    border: var(--deskPrimaryBorder);
-    padding: var(--deskContentPad);
   }
 
   .title {
