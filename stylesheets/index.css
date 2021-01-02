@@ -4,10 +4,6 @@
   grid-gap: var(--contentPad);
 }
 
-.title {
-  text-align: center;
-}
-
 .title h1 {
   font-size: 2rem;
   font-weight: normal;
